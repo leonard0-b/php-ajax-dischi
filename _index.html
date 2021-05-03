@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/master.css">
   <title>Dischi PHP-Vue</title>
 </head>
@@ -18,18 +20,18 @@
           <!-- con un v-for ciclo tutte le option in base all'array dei generi
           il value dovrà prendere il nome dal'oggetto dell'array corrispondente
           ad esempio in questo caso in albums ci interessa il .genre quindi value sarà genre per poterli comparare -->
-          <option></option>
+          <option v-for="album in albums">
+            {{album.author}}
+          </option>
         </select>
         <div class="search">
-<!--           <input class="search-input" v-model="inputSearch" type="text" name="" placeholder="Cerca artista...">
-          <button type="button" name="button"><i class="fas fa-search"></i></button>
- -->    </div>
+        </div>
       </div>
     </header>
     <main class="flex container">
       <div class="card" v-for="album in albums">
         <img :src="album.poster" alt="">
-        <div class="overlay">
+        <div class="overlay flex">
           <h4>{{album.author}}</h4>
           <h2>{{album.title}}</h2>
           <p>{{album.year}}</p>
