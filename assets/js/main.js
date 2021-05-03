@@ -7,7 +7,16 @@
   \*********************/
 /***/ (() => {
 
-
+Vue.config.devtools = true;
+var app = new Vue({
+  el: "#root",
+  data: {},
+  created: function created() {
+    axios.get("http://localhost/php-ajax-dischi/call.php").then(function (response) {
+      console.log(response.data);
+    });
+  }
+});
 
 /***/ }),
 
