@@ -1,0 +1,26 @@
+{
+  "name": "php-ajax-dischi",
+  "version": "1.0.0",
+  "description": "Prima Milestone: Stampiamo i dischi solo con l’utilizzo di PHP, che stampa direttamente i dischi in pagina: al caricamento della pagina ci saranno tutti i dischi. Seconda Milestone: Attraverso l’utilizzo di Axios: al caricamento della pagina vue chiederà attraverso una chiamata i dischi a php e li stamperà attraverso vue. Bonus: Attraverso un’altra chiamata axios, filtrare gli album per artista.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonard0-b/php-ajax-dischi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leonard0-b/php-ajax-dischi/issues"
+  },
+  "homepage": "https://github.com/leonard0-b/php-ajax-dischi#readme",
+  "devDependencies": {
+    "laravel-mix": "^6.0.18",
+    "postcss": "^8.1.14",
+    "sass": "^1.32.12",
+    "sass-loader": "^11.0.1"
+  }
+}
