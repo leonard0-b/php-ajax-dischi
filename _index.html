@@ -9,10 +9,38 @@
 </head>
 <body>
   <div id="root">
-    
-
-
+    <header>
+      <h1 class="text-center">La tua Musica</h1>
+      <div class="music-select flex">
+        <label for="genres">Cosa ti va di ascoltare: </label>
+        <select>
+          <option value="All">All</option>
+          <!-- con un v-for ciclo tutte le option in base all'array dei generi
+          il value dovrà prendere il nome dal'oggetto dell'array corrispondente
+          ad esempio in questo caso in albums ci interessa il .genre quindi value sarà genre per poterli comparare -->
+          <option></option>
+        </select>
+        <div class="search">
+<!--           <input class="search-input" v-model="inputSearch" type="text" name="" placeholder="Cerca artista...">
+          <button type="button" name="button"><i class="fas fa-search"></i></button>
+ -->    </div>
+      </div>
+    </header>
+    <main class="flex container">
+      <div class="card" v-for="album in albums">
+        <img :src="album.poster" alt="">
+        <div class="overlay">
+          <h4>{{album.author}}</h4>
+          <h2>{{album.title}}</h2>
+          <p>{{album.year}}</p>
+          <p>{{album.genre}}</p>
+        </div>
+      </div>
+    </main>
   </div>
+
+
+
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>

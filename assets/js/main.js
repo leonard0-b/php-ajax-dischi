@@ -10,10 +10,15 @@
 Vue.config.devtools = true;
 var app = new Vue({
   el: "#root",
-  data: {},
+  data: {
+    albums: []
+  },
   created: function created() {
+    var _this = this;
+
     axios.get("http://localhost/php-ajax-dischi/call.php").then(function (response) {
-      console.log(response.data);
+      _this.albums = response.data;
+      console.log(_this.albums);
     });
   }
 });
