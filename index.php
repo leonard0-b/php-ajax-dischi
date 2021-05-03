@@ -8,5 +8,8 @@ foreach ($dischi as $disc => $value) {
   echo "<p>" . $value["year"] . "</p>";
   echo "<p>" . $value["genre"] . "</p>";
   echo $value["poster"];
+
+ 
+
   }
 ?>

@@ -3,6 +3,7 @@ var app = new Vue({
   el: "#root",
   data: {
     albums: [],
+
   },
   created(){
     axios.get("http://localhost/php-ajax-dischi/call.php")
@@ -10,5 +11,5 @@ var app = new Vue({
     this.albums = response.data;
     console.log(this.albums);
     });  
-  }
+  },
 });
