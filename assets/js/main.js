@@ -11,7 +11,8 @@ Vue.config.devtools = true;
 var app = new Vue({
   el: "#root",
   data: {
-    albums: []
+    albums: [],
+    filterArtist: ""
   },
   created: function created() {
     var _this = this;
@@ -20,6 +21,21 @@ var app = new Vue({
       _this.albums = response.data;
       console.log(_this.albums);
     });
+  },
+  methods: {
+    getByArtist: function getByArtist() {
+      var _this2 = this;
+
+      axios.get("http://localhost/php-ajax-dischi/call.php", {
+        params: {
+          author: this.filterArtist
+        }
+      }) //aggiungo il parametro alla chiamata api
+      .then(function (response) {
+        _this2.albums = response.data;
+        console.log(_this2.albums);
+      });
+    }
   }
 });
 
